@@ -227,6 +227,7 @@
             const letterU = new THREE.TextureLoader().load('static/img/u.svg');
             const letterD = new THREE.TextureLoader().load('static/img/d.svg');
             const letters = [letterR, letterL, letterU, letterD, letterF, letterB];
+            const faces = ['R', 'L', 'U', 'D', 'F', 'B'];
 
             const svgClockwise = new THREE.TextureLoader().load('static/img/clock.svg');
             const svgCounterclockwise = new THREE.TextureLoader().load('static/img/cclock.svg');
@@ -266,6 +267,7 @@
                 counterclockwiseSprite.position.set(x - 20, y, z);
                 clockwiseSprite.position.set(x + 20, y, z);
 
+                letterSprite.spriteType = faces[i];
                 clockwiseSprite.spriteType = i + 1;
                 counterclockwiseSprite.spriteType = i + 7;
 
