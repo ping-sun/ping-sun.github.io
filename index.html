@@ -167,10 +167,11 @@
 
         // Slider
         function sliderChange(val) {
+            // Update HTML early.
+            let $sliderVal = document.getElementById('sliderVal');
+            $sliderVal.innerHTML = parseInt(val) + "ms";
             if (allowSliderChange) {
                 timePerRotation = parseInt(val);
-                let $sliderVal = document.getElementById('sliderVal');
-                $sliderVal.innerHTML = timePerRotation + "ms";
             }
         }
 
